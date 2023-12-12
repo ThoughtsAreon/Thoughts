@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  button,
+  [type='button'],
+  [type='reset'],
+  [type='submit'] {
+    background: none;
+  }
+
+  @font-face {
+    font-family: 'Satoshi12px';
+    src: url('./fonts/Satoshi-Regular.woff2') format('woff2');
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  @font-face {
+    font-family: 'Satoshi14px';
+    src: url('./fonts/Satoshi-Regular.woff2') format('woff2');
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  @font-face {
+    font-family: 'Satoshi16px';
+    src: url('./fonts/Satoshi-Regular.woff2') format('woff2');
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @font-face {
+    font-family: 'Satoshi20px';
+    src: url('./fonts/Satoshi-Bold.woff2') format('woff2');
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  @font-face {
+    font-family: 'Satoshi';
+    src: url('./fonts/Satoshi-Bold.woff2') format('woff2');
+    font-display: swap;
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+@layer utilities {
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+
+  .word-spacing-16 {
+    word-spacing: 16px;
+  }
+
+  .break-word {
+    word-break: break-word;
+  }
+} 
+
+body {
+  height: 100vh;
+  width: 100%;
+  background-color: #F3F4F6;
+  font-family: 'Satoshi16px';
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+::-webkit-scrollbar-corner {
+  display: none;
+}
+
+
