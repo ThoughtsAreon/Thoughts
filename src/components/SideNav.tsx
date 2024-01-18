@@ -95,7 +95,7 @@ export function NavBarLogo({ isHomePage = false }: { isHomePage?: boolean }) {
           "h-12 ml-10": isHomePage,
           "h-8": !isHomePage,
         })}
-        alt="Tales"
+        alt="Thoughts"
       />
       <span
         className={classNames(

@@ -173,7 +173,7 @@ const ArticlePage = ({
     };
 
     if (author && authorId && !isPreview) {
-      if (author.name) document.title = `${author.name} - Tales`;
+      if (author.name) document.title = `${author.name} - Thoughts`;
       getArticlesByAuthor(authorId);
     }
   }, [author, isPreview, articleId, address, connected]);
