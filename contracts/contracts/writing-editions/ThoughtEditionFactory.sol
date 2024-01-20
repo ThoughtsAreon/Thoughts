@@ -127,6 +127,16 @@ contract ThoughtEditionFactory is Ownable, IThoughtEditionFactory {
         emit AuthorRegistered(userName, msg.sender, name);
     }
 
+    // Funtion to register claim
+    function registerClaim(address buyer) override external {
+        require(editionExists[msg.sender],"This function can olny be called by edition contracts");
+        buyerToEditions[buyer].push(msg.sender);
+    }
+
+    // Function to get claimed edtions
+    function getClaimedEditions(address buyer) override external view returns (address[] memory) {
+        return buyerToEditions[buyer];
+    }
 
     // Function to blacklist an edition
     function setBlacklisted(address edition, bool val) override external onlyOwner { 
